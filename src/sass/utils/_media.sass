@@ -1,0 +1,21 @@
+/**
+ * Media queries
+ */
+
+@mixin device($device)
+
+  @if $device == mobile
+    @media (max-width: 600px)
+      @content
+
+  @else if $device == tablet
+    @media (max-width: 1024px)
+      @content
+
+  @else if $device == laptop
+    @media (max-width: 1440px)
+      @content
+
+  @else if $device == desktop
+    @media (min-width: 1441px)
+      @content

@@ -1,0 +1,22 @@
+@use '../../sass/utils/element'
+
+@mixin add-cta($color)
+
+  @include element.text(0.8rem, 0.8rem, 600, #{$color}, uppercase, center)
+  padding: 1rem 1.5rem
+  border: 2px solid $color
+  border-radius: 1.5rem
+  transition: background-color 0.2s, color 0.2s
+
+  &:hover
+    background-color: $color
+    color: white
+
+  &:active
+    border-color: var(--color-bg)
+
+.cta-primary
+  @include add-cta(var(--color-primary-1))
+
+.cta-secondary
+  @include add-cta(var(--color-secondary-1))

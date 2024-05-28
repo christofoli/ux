@@ -1,0 +1,16 @@
+@use '../../sass/utils/element'
+@use '../../sass/utils/media'
+  
+#main-footer
+  
+  padding-inline: calc(var(--full-gap) + var(--regular-gap))
+  transition: padding 0.2s
+  
+  p
+    @include element.text(0.8rem, 0.8rem, 600, var(--color-secondary-1), $align: center)
+
+    padding-block: var(--regular-gap)
+    border-top: 1px solid var(--color-secondary-1)
+
+  @include media.device(tablet)
+    padding-inline: var(--regular-gap)

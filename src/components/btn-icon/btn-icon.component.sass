@@ -1,0 +1,29 @@
+@use '../../sass/utils/align'
+@use '../../sass/utils/element'
+@use '../../sass/utils/media'
+
+%add-btn
+
+  @include element.block(2.5rem, 2.5rem)
+  @include align.center-position()
+
+  background-repeat: no-repeat
+  background-position: center
+  background-size: 50%
+  margin-left: 1.4rem
+  border-radius: 0.5rem
+  visibility: hidden
+
+  &:active
+    background-color: var(--color-bg)
+
+  @include media.device(tablet)
+    visibility: visible
+
+.btn-menu
+  @extend %add-btn
+  background-image: url('../../assets/menu.png')
+
+.btn-close
+  @extend %add-btn
+  background-image: url('../../assets/close.png')

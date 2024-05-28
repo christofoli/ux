@@ -32,7 +32,7 @@
               }
             ],
             "styles": [
-              "src/styles.sass"
+              "src/global-styles.sass"
             ],
             "scripts": []
           },
@@ -91,7 +91,7 @@
               }
             ],
             "styles": [
-              "src/styles.sass"
+              "src/global-styles.sass"
             ],
             "scripts": []
           }

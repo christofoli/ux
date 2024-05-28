@@ -1,0 +1,57 @@
+/**
+ * Most used properties
+ */
+
+/* Block */
+@mixin block($width: 100%, $height: auto, $bg-color: null, $display: null)
+
+  width: $width
+  height: $height
+  background-color: $bg-color
+  display: $display
+
+/* Flexbox */
+@mixin flex($direction: null, $content: null, $gap: null, $wrap: null, $align: null)
+
+  display: flex
+  flex-direction: $direction
+  justify-content: $content
+  gap: $gap
+  flex-wrap: $wrap
+  align-items: $align
+
+/* Position */
+@mixin position($position: relative, $top: null, $right: null, $bottom: null, $left: null, $inset: null, $index: 1)
+
+  position: $position
+  z-index: $index
+
+  @if $inset == null
+    top: $top
+    right: $right
+    bottom: $bottom
+    left: $left
+  @else
+    inset: $inset
+
+/* Pseudo-element */
+@mixin pseudo($width: 0, $height: 0, $bgcolor: null, $content: null)
+
+  background-color: $bgcolor
+  width: $width
+  height: $height
+
+  @if $content == null
+    content: ''
+  @else
+    content: $content
+
+/* Text */
+@mixin text($size: null, $line: null, $weight: null, $color: null, $transform: null, $align: null)
+
+  font-size: $size
+  font-weight: $weight
+  line-height: $line
+  color: $color
+  text-transform: $transform
+  text-align: $align

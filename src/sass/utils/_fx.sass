@@ -1,0 +1,23 @@
+/**
+ * Animations
+ */
+
+/* Keyframes */
+@mixin keyframes($name)
+
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+/* Fade In */
+@include keyframes(fade-in)
+  100%
+    opacity: 1
+
+.fade-in
+  animation: fade-in var(--time) forwards

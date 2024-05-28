@@ -1,0 +1,24 @@
+/**
+ * Main rules
+ */
+  
+@use '../utils/fx'
+
+html
+
+  scroll-behavior: smooth
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizeLegibility
+  text-size-adjust: 100%
+
+body
+
+  background-color: var(--color-bg)
+  font-family: sans-serif
+  color: var(--color-text)
+  opacity: 0
+  animation: fade-in 5s 1s forwards
+
+  &[data-sidenav-open]
+    #sidenav
+      left: 0

@@ -1,0 +1,29 @@
+/**
+ * Alignment states
+ */
+
+/* Position */
+@mixin center-position($position: absolute)
+
+  margin: auto
+  inset: 0
+
+  @if $position == fixed
+    position: fixed
+  @else
+    position: $position
+
+/* Content */
+@mixin center-content($orientation: none)
+
+  display: flex
+
+  @if $orientation == x
+    justify-content: center
+
+  @else if $orientation == y
+    align-items: center
+
+  @else
+    justify-content: center
+    align-items: center

@@ -1,0 +1,35 @@
+@use '../../sass/utils/element'
+@use '../../sass/utils/media'
+  
+#sidenav
+
+  @include element.block(var(--full-gap), 100%, var(--color-secondary-1))
+  @include element.position(fixed, $top: 0, $left: 0)
+
+  padding-block: var(--half-gap)
+  transition: left 0.2s
+
+  ul
+    width: 100%
+    padding: var(--min-gap)
+    list-style: none
+
+    li
+      margin-bottom: 0
+
+    a
+      padding: 0.5rem 0.8rem
+      color: white
+      transition: all 0.2s
+      display: block
+
+      &:hover
+        background-color: var(--color-primary-1)
+        color: var(--color-primary-2)
+
+      &:active
+        background-color: var(--color-primary-1-active)
+        transition: none
+
+  @include media.device(tablet)
+    left: calc(var(--full-gap) * -1)

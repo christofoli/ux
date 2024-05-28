@@ -1,0 +1,28 @@
+/**
+ * Title elements
+ */
+
+@use '../utils/align'
+@use '../utils/element'
+
+h1, h2
+  font-weight: 600
+  color: var(--color-primary-1)
+  margin-bottom: var(--min-gap)
+  position: relative
+
+h1
+  font-size: 2rem
+
+h2
+  font-size: 1.2rem
+  display: inline-block
+
+  &::before, &::after
+    @include element.pseudo(10px, 2px, var(--color-primary-1))
+    @include align.center-position()
+
+  &::before
+    margin-left: -20px
+  &::after
+    margin-right: -20px

@@ -1,0 +1,25 @@
+@use '../../sass/utils/element'
+@use '../../sass/utils/media'
+
+#home
+
+  background-color: var(--color-bg)
+  padding-inline: calc(var(--full-gap) + var(--regular-gap))
+  padding-block: calc(var(--half-gap) + var(--regular-gap)) var(--half-gap)
+  text-align: center
+  transition: padding 0.2s
+
+  article
+    header, section
+      margin-bottom: var(--regular-gap)
+
+    li
+      position: relative
+
+      span
+        @include element.block(20px, 20px)
+        @include element.position(absolute)
+        margin-left: 0.7rem
+
+  @include media.device(tablet)
+    padding-inline: var(--regular-gap)
